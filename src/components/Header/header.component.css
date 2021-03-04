@@ -1,0 +1,36 @@
+.header {
+    position: fixed;
+    background-color: #202020;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+}
+.header > .header__wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header > .header__wrapper > .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header > .header__wrapper > .logo > h2 {
+    margin-left: 5px;
+}
+
+.header > .header__wrapper > .search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.header > .header__wrapper > .search > input {
+    border: none;
+    outline: none;
+
+}

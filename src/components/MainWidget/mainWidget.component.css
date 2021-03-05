@@ -8,16 +8,21 @@
     margin-top: 20px;
 }
 
-.mainWidget > .top > .topItem {
+.mainWidget > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainWidget > .top > .top__wrapper > .topItem {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-top: 5px;
 }
-.mainWidget > .top > .topItem:first-child {
+.mainWidget > .top > .top__wrapper > .topItem:first-child {
     margin-top: 0;
 }
-.mainWidget > .top > .topItem > p {
+.mainWidget > .top > .top__wrapper > .topItem > p {
     margin-left: 5px;
 }
 
@@ -27,16 +32,15 @@
     justify-content: space-between;
     margin-top: 20px;
 }
-.mainWidget > .mainWidget__main > .left {
+.mainWidget > .top > .right > .right__wrapper {
     display: flex;
     justify-items: flex-start;
-    /* align-items: center; */
 }
-.mainWidget > .mainWidget__main > .left > h1 {
+.mainWidget > .top > .right > .right__wrapper > h1 {
     font-weight: normal;
     font-size: 50px;
 }
-.mainWidget > .mainWidget__main > .left > span {
+.mainWidget > .top > .right > .right__wrapper > span {
     font-size: 10px;
     font-weight: lighter;
 }
@@ -59,15 +63,22 @@
 }
 
 
-/* animation for weather icon rotating */
+/* animations for weather icon */
 #icon {
     animation: rotation 7s infinite linear;
 }
+#swing{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}
 @keyframes rotation {
-    from {
-            -webkit-transform: rotate(0deg);
-    }
-    to {
-            -webkit-transform: rotate(359deg);
-    }
+    from { transform: rotate(0deg) }
+    to { transform: rotate(359deg) }
+}
+@keyframes swinging{
+    0% { transform: rotate(10deg) }
+    50% { transform: rotate(-5deg) }
+    100% { transform: rotate(10deg) }
 }

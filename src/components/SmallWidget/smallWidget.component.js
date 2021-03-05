@@ -13,10 +13,14 @@ import {
 } from "weather-icons-react";
 
 
-const SmallWidget = ({ day, date, type, temp, lowestTemp }) => {
+const SmallWidget = ({ day, date, type, temp, lowestTemp, changeDay }) => {
     const [sunny, setSunny] = useState(false);
     const [rainy, setRainy] = useState(false);
     const [cloudy, setCloudy] = useState(false);
+
+    const handleClick = () => {
+        changeDay(day);
+    }
 
     useEffect(() => {
         if(type === 'sunny') {
@@ -29,7 +33,7 @@ const SmallWidget = ({ day, date, type, temp, lowestTemp }) => {
     }, []);
 
     return (
-        <div className='smallWidget'>
+        <div id='leo zver' className='smallWidget' onClick={handleClick}>
             <div className="date">
                 <h3>{day}, {date}</h3>
             </div>

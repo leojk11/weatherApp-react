@@ -11,15 +11,26 @@ import MainWidget from '../MainWidget/mainWidget.component';
 import SmallWidget from '../SmallWidget/smallWidget.component';
 
 const Main = () => {
+    const [chosenDay, setChosenDay] = useState({});
+
+    const filterDayObj = (test) => {
+        const newDay = weatherData.days.filter(day => {
+            return day.day === test
+        })
+
+        setChosenDay(newDay[0]);
+    }
+
     useEffect(() => {
         console.log(weatherData.days)
     }, []);
 
     return (
         <div className='main'>
-            <MainWidget />
+            <h1>Current day:</h1>
+            <MainWidget day={chosenDay} />
 
-            <h1 style={{ color: 'gray' }}>Other days:</h1>
+            <h1>Choose days:</h1>
 
             <div className="days">
                 {
@@ -30,6 +41,7 @@ const Main = () => {
                             type={day.type}
                             temp={day.temp}
                             lowestTemp={day.lowestTemp}
+                            changeDay={filterDayObj}
                         />
                     })
                 }

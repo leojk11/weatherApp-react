@@ -1,0 +1,35 @@
+.smallWidget {
+    width: 100%;
+    padding: 10px;
+    background-color: #202020;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smallWidget > .date {
+    width: 200px;
+}
+.smallWidget > .weather {
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    width: 200px;
+}
+
+.smallWidget > .temp {
+    width: 80px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+}
+
+.smallWidget > .temp > p {
+    font-weight: lighter;
+    color: gray;
+    font-size: 11px;
+    margin-left: 5px;
+}

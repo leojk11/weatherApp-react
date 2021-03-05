@@ -1,0 +1,73 @@
+.mainWidget {
+    background-color: #202020;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.mainWidget > .top > .topItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+}
+.mainWidget > .top > .topItem:first-child {
+    margin-top: 0;
+}
+.mainWidget > .top > .topItem > p {
+    margin-left: 5px;
+}
+
+.mainWidget > .mainWidget__main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.mainWidget > .mainWidget__main > .left {
+    display: flex;
+    justify-items: flex-start;
+    /* align-items: center; */
+}
+.mainWidget > .mainWidget__main > .left > h1 {
+    font-weight: normal;
+    font-size: 50px;
+}
+.mainWidget > .mainWidget__main > .left > span {
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.mainWidget > .mainWidget__main > .right > .item {
+    margin-top: 5px;
+    color: gray;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+.mainWidget > .mainWidget__main > .right > .item > h4 {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+.mainWidget > .mainWidget__main > .right > .item > span {
+    font-weight: lighter;
+    width: 25px;
+}
+
+
+/* animation for weather icon rotating */
+#icon {
+    animation: rotation 7s infinite linear;
+}
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
